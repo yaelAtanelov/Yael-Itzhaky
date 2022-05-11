@@ -1,0 +1,312 @@
+* {
+    font-family: mySecondFont;
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    background-image: url(../static/background3.jpg);
+    background-position: center;
+    background-size: cover;
+    --nav-link-load-time: 900ms;
+}
+
+.navbar {
+    height: 15%;
+    display: flex;
+    align-items: center;
+    padding-right: 6%;
+    padding-left: 6%;
+    background-color: #fff;
+    box-shadow: 0 0 3px black;
+    position: sticky;
+    top: 0;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+    margin: 3vh;
+    padding: 3vh;
+
+}
+
+
+.logo {
+    width: 20vh;
+    cursor: pointer;
+}
+
+.menu {
+    padding-left: 5vh;
+    width: 10vh;
+    cursor: pointer;
+}
+
+nav li {
+    list-style: none;
+    display: inline-block;
+    margin: 2vh;
+    animation-name: nav-link-load;
+    animation-duration: var(--nav-link-load-time);
+    animation-timing-function: ease-in;
+    animation-delay: 300ms;
+    animation-fill-mode: forwards;
+    transform: scale(0);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(144, 181, 241);
+    font-size: 4vh;
+}
+
+nav li a:hover {
+    color: hotpink;
+}
+
+nav ul li a.active {
+    color: hotpink;
+}
+
+header {
+    font-family: myTherdFont;
+    margin: 10vh;
+    color: rgb(250, 252, 253);
+    font-size: 8vh;
+    text-align: center;
+
+}
+
+.grid-container-Home-page {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3vh;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas:
+        "header header"
+        "content pic"
+        "content pic"
+        "footer footer";
+}
+
+.grid-item {
+    border: none;
+}
+
+.grid-item-1 {
+    grid-area: header;
+}
+
+.grid-item-2 {
+    grid-area: content;
+    padding: 5vh;
+    margin: 5vh;
+    flex-grow: 1;
+
+}
+
+.grid-item-3 {
+    justify-self: center;
+    grid-area: pic;
+    width: 90%;
+    height: 50vh;
+    display: inline-block;
+    border-radius: 4vh;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-position: center;
+    background-size: cover;
+}
+
+.Home {
+    background-image: url(../static/pic5.jpeg);
+
+}
+
+.grid-item-4 {
+    grid-area: footer;
+
+}
+
+h2 {
+    padding: 3vh;
+    border-bottom: 1vh solid rgb(215, 232, 243);
+    color: rgb(142, 44, 161);
+}
+
+p {
+    color: #fff;
+}
+
+footer {
+    height: auto;
+    padding-top: 30vh;
+}
+
+.footer-content {
+    background: rgba(179, 0, 149, 0.114);
+    height: 30vh;
+    padding: 10vh;
+    padding-top: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4vh;
+}
+
+.socials li {
+    margin-bottom: 1vh;
+    margin-left: 3vh;
+    margin-right: 3vh;
+}
+
+.socials a {
+    color: #fff;
+}
+
+.socials a i {
+    font-size: 5vh;
+}
+
+.socials a:hover i {
+    color: hotpink;
+}
+
+.grid-container-Contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3vh;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas:
+        'header header'
+        "content pic"
+        "content pic"
+        'form form'
+        'footer footer';
+}
+
+.Contact {
+    background-image: url(../static/pic6.jpeg);
+
+}
+
+.grid-item-5 {
+    grid-area: form;
+    flex-grow: 1;
+
+}
+
+fieldset {
+    padding-left: 10vh;
+    padding-right: 10vh;
+    margin: 10vh;
+    border-radius: 3vh;
+    border-color: rgb(172, 199, 243);
+}
+
+#thoughts{
+    border-radius:1vh ;
+}
+
+.progras {
+    color: rgb(32, 102, 158);
+}
+
+#clickbutten {
+    margin-bottom: 5vh;
+    padding: 2vh;
+    border-radius: 2vh;
+    border-color: #fff;
+    background-color: rgb(172, 199, 243);
+}
+
+@media only screen and (max-width: 700px) {
+    body {
+        background-image: linear-gradient(135deg, rgb(241, 176, 230) 0%, rgb(144, 181, 241) 100%);
+        background-position: center;
+        background-size: cover;
+    }
+
+    .grid-container-Home-page {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas:
+            'header'
+            'pic'
+            'content'
+            'footer';
+
+    }
+
+    .grid-container-Contact {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas:
+            'header'
+            "pic"
+            "content"
+            'form'
+            'footer';
+    }
+
+    .logo {
+        width: 15vh;
+        cursor: pointer;
+    }
+
+    .menu {
+        padding-left: 3vh;
+        width: 7vh;
+        cursor: pointer;
+    }
+
+
+    nav li {
+        list-style: none;
+    }
+
+    nav ul li a {
+        font-size: 2.5vh;
+    }
+}
+
+
+@font-face {
+    font-family: mySecondFont;
+    src: url(../static/Cinzel/Cinzel-VariableFont_wght.ttf );
+}
+
+@font-face {
+    font-family: myTherdFont;
+    src: url(../static/Cinzel/static/Cinzel-Regular.ttf);
+}
+
+
+@keyframes nav-link-load {
+    0% {
+        transform: scale(0);
+    }
+
+    90% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
