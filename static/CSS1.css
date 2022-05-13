@@ -5,12 +5,14 @@
     box-sizing: border-box;
 }
 
+
+
 body {
     width: 100%;
     background-image: url(../static/background3.jpg);
     background-position: center;
     background-size: cover;
-    --nav-link-load-time: 900ms;
+    --nav-link-load-time: 1000ms;
 }
 
 .navbar {
@@ -63,13 +65,15 @@ nav ul li a {
     font-size: 4vh;
 }
 
-nav li a:hover {
+ nav li a:hover {
     color: hotpink;
+}
+.active{
+    color: hotpink;
+
 }
 
-nav ul li a.active {
-    color: hotpink;
-}
+
 
 header {
     font-family: myTherdFont;
@@ -77,6 +81,11 @@ header {
     color: rgb(250, 252, 253);
     font-size: 8vh;
     text-align: center;
+    animation-name: nav-link-load;
+    animation-duration: var(--nav-link-load-time);
+    animation-timing-function: ease-in;
+    animation-delay: 300ms;
+    animation-fill-mode: forwards;
 
 }
 
@@ -129,6 +138,15 @@ header {
 
 .grid-item-4 {
     grid-area: footer;
+
+}
+
+.bigger:hover{
+    animation-name: bigger;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-delay: 0;
+    animation-fill-mode: forwards;
 
 }
 
@@ -227,12 +245,37 @@ fieldset {
     color: rgb(32, 102, 158);
 }
 
-#clickbutten {
+.clickbutten {
+    height: 7vh;
+    width: 40vh;
     margin-bottom: 5vh;
+    margin-top: 2vh;
     padding: 2vh;
-    border-radius: 2vh;
+    border-radius: 5vh;
     border-color: #fff;
     background-color: rgb(172, 199, 243);
+    border: none;
+    outline: none;
+    font-size: 3vh;
+    letter-spacing: 0.3vh;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.clickbutten:hover{
+    background-size: 50vh;
+    background: linear-gradient(90deg,rgb(231, 111, 211), rgb(241, 176, 230) , rgb(144, 181, 241), rgb(231, 111, 211) );
+    background-size: 400%;
+    animation: glow 8s linear infinite;
+}
+
+@keyframes glow{
+    0%{
+        background-position: 0%;
+    }
+    100%{
+        background-position: 400%;
+    }
 }
 
 @media only screen and (max-width: 700px) {
@@ -300,6 +343,20 @@ fieldset {
 @keyframes nav-link-load {
     0% {
         transform: scale(0);
+    }
+
+    90% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes bigger{
+    0% {
+        transform: scale(1);
     }
 
     90% {

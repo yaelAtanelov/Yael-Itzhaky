@@ -1,8 +1,24 @@
+const activePage = window.location.pathname;
 
+const navLinks = document.querySelectorAll('nav a').forEach(link => {    
+  if(link.href.includes(`${activePage}`)){
+    link.classList.add('active');
+  }
+});
 
-function myFunction(){
-    document.getElementById("P1").innerHTML="wow!!!!!";
-    document.getElementById("kelev").src= "https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvczY5LWFrZTk3NTMtYWUtbC5qcGc.jpg?s=WfotuHZ0zEdp7UL7BM9twAVRdzxlV1fSXHOBwDQZMhI";
-
-
+var gvalue=1;
+function loading(){
+ var progress = document.getElementById ('progress');
+     setInterval (function ()
+    { 
+                 if(gvalue<100){
+                    gvalue++;
+                    progress.value =gvalue;  
+                  }
+                  loading();            
+      }, 1000);
+      document.getElementById("P1").innerHTML="We are sending your request now. Please wait.";
 }
+
+
+
