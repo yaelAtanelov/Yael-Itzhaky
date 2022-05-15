@@ -115,7 +115,13 @@ header {
     padding: 5vh;
     margin: 5vh;
     flex-grow: 1;
+}
 
+#readMore{
+    border: none;
+    background: none;
+    color:  rgb(142, 44, 161) ;
+    cursor: pointer;
 }
 
 .grid-item-3 {
@@ -133,7 +139,6 @@ header {
 
 .Home {
     background-image: url(../static/pic5.jpeg);
-
 }
 
 .grid-item-4 {
