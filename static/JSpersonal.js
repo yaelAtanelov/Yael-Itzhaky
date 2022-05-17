@@ -21,14 +21,19 @@ function loading(){
 }
 
 
-function readMore(){
-  document.getElementById("BasicP").innerHTML="In it I present to you my works to be inspired and inspired by others. I would love for you to collaborate with my venture to create a non-profit website.We are so excited to share some of our best products with you here on our website. We strive to bring you the highest quality stones & diamonds available while keeping our prices affordable, so please explore and enjoy the uniquely crafted jewelry.";
-  document.getElementById("readMore").innerHTML="";
-}
 
-function readMoreC(){
-  document.getElementById("BasicPC").innerHTML="Please send me here what you think of my work, I will be happy for new and original ideas and feedback on the site";
-  document.getElementById("readMore").innerHTML="";
-}
+const ReadMoreButton= document.querySelector('.read-more-but');
+const text =document.querySelector('.text');
+
+ReadMoreButton.addEventListener('click',(e)=>{
+  text.classList.toggle('show-more');
+  if(ReadMoreButton.innerText== "Click hear to read more"){
+    ReadMoreButton.innerText= "Click hear to read less";
+  }
+  else{
+    ReadMoreButton.innerText= "Click hear to read more";
+  }
+
+})
 
 

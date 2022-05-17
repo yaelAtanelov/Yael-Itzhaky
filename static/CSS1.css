@@ -117,7 +117,15 @@ header {
     flex-grow: 1;
 }
 
-#readMore{
+.moreText{
+    display: none;
+}
+
+.text.show-more .moreText{
+    display: inline;
+}
+
+.read-more-but{
     border: none;
     background: none;
     color:  rgb(142, 44, 161) ;
@@ -166,15 +174,17 @@ p {
 }
 
 footer {
-    height: auto;
-    padding-top: 30vh;
+    background: rgba(179, 0, 149, 0.114);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
 }
 
 .footer-content {
-    background: rgba(179, 0, 149, 0.114);
     height: 30vh;
     padding: 10vh;
-    padding-top: 20vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -329,7 +339,7 @@ fieldset {
     }
 
     nav ul li a {
-        font-size: 2.5vh;
+        font-size: 4vh;
     }
 }
 

@@ -31,64 +31,69 @@
         </div>
         <div class="grid-item grid-item-2">
             <h2>Contect me :)</h2>
-            <p id="BasicPC"></p>
-            <button id="readMore" type="button" onclick="readMoreC()">Clikc hear to read more</button>
+            <p class="text">
+                <span class="moreText">Please send me here what you think of my work,
+                    I will be happy for new and original ideas and feedback on the site
+                </span>
+            </p>
+            <button class="read-more-but">Click hear to read more</button>
         </div>
         <div class="grid-item grid-item-3 Contact bigger">
         </div>
 
         <div class="grid-item grid-item-5">
-            <fieldset>
-                <legend>Contact Form</legend>
+            <form action="" method="post">
+                <fieldset>
+                    <legend>Contact Form</legend>
 
-                <label for="fullname">Full Name:</label>
-                <input type="text" id="fullname" name="fullname" required> <br><br>
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname" required> <br><br>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required> <br><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required> <br><br>
 
-                <label for="telephone">Telephone:</label>
-                <input type="tel" id="telephone" name="telephone" required pattern="0.*"><br><br>
+                    <label for="telephone">Telephone:</label>
+                    <input type="tel" id="telephone" name="telephone" required pattern="0.*"><br><br>
 
-                <label for="satisfaction">Level of satisfaction:</label>
-                <input type="range" id="satisfaction" name="satisfaction" min="0" max="10" required> <br><br>
+                    <label for="satisfaction">Level of satisfaction:</label>
+                    <input type="range" id="satisfaction" name="satisfaction" min="0" max="10" required> <br><br>
 
-                <label for="topic">Select your topic:</label><br>
-                <input type="radio" id="topic" name="topic" required> Technical assistance <br>
-                <input type="radio" id="topic" name="topic" required> Get back to me <br>
-                <input type="radio" id="topic" name="topic" required> Ideas <br>
-                <input type="radio" id="topic" name="topic" required> Other <br><br>
-
-
-                <label for="preference">Select a preference:</label><br>
-                <input list="preference" type="text"><br>
-                <datalist id="preference">
-                    <option value="necklace"></option>
-                    <option value="Rings"></option>
-                    <option value="Bracelets"></option>
-                    <option value="Earrings"></option>
-                </datalist><br><br>
+                    <label for="topic">Select your topic:</label><br>
+                    <input type="radio" id="topic" name="topic" required> Technical assistance <br>
+                    <input type="radio" id="topic" name="topic" required> Get back to me <br>
+                    <input type="radio" id="topic" name="topic" required> Ideas <br>
+                    <input type="radio" id="topic" name="topic" required> Other <br><br>
 
 
+                    <label for="preference">Select a preference:</label><br>
+                    <input list="preference" type="text"><br>
+                    <datalist id="preference">
+                        <option value="necklace"></option>
+                        <option value="Rings"></option>
+                        <option value="Bracelets"></option>
+                        <option value="Earrings"></option>
+                    </datalist><br><br>
 
 
-                <textarea name="thoughts" id="thoughts" cols="50" rows="10"
-                    placeholder="penny for your thoughts:)"></textarea> <br><br>
-
-                <input type="checkbox" id="agree" name="agree" required>
-                <label for="agree">Agree to send messages and promotions</label><br><br>
-
-                <p class="progras"> that's it! Just click "send" and I will read your
-                    response</label>
-                <p>
-                    
-
-                <p id="P1"></p>
-                <progress id="progress" min="1" max="100"></progress><br>
-                <button class="clickbutten" type="button" onclick="loading()">Click To Send</button> <br>
 
 
-            </fieldset>
+                    <textarea name="thoughts" id="thoughts" cols="50" rows="10"
+                        placeholder="penny for your thoughts:)"></textarea> <br><br>
+
+                    <input type="checkbox" id="agree" name="agree" required>
+                    <label for="agree">Agree to send messages and promotions</label><br><br>
+
+                    <p class="progras"> that's it! Just click "send" and I will read your
+                        response</label>
+                    <p>
+
+
+                    <p id="P1"></p>
+                    <progress id="progress" min="1" max="100"></progress><br>
+                    <button class="clickbutten" onclick="loading()">Click To Send</button> <br>
+
+                </fieldset>
+            </form>
         </div>
 
         <div class="grid-item grid-item-4">
